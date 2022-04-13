@@ -1,0 +1,38 @@
+<meta charset="UFT">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write ("<br><br>");
+    }
+
+    function mostra (frase) {
+
+        document.write (frase);
+        pulaLinha();
+    }
+
+    var vitorias = parseInt(prompt("Entre com o números de vitorias."));  //prompt ler como texto.
+    var empates = parseInt (prompt("Entre com o números de empates."));   // Passar para parseInt quando eu quiser converter o prompet que leio como texto passar para numero. CONVERTER DE TEXTO PARA NUMERO
+
+    var pontos = (vitorias *3) + empates;
+
+    mostra("Os pontos do seu time é " + pontos);
+
+    if (pontos > 28) {
+        mostra("Se time está melhor que o ano passado.");
+    }
+
+    if (pontos < 28) {
+        mostra("Se time está pior que o ano passado.");
+    }
+
+    if (pontos == 28) {
+        mostra("Se time está igual ao ano passado.");
+    }
+
+//  Pode da um erro de soma porque; o retorno da função prompt() é sempre string ao utilizar o operador + é aplicado uma concatenação, por isso colocar a função parseInt
+
+
+</script>
